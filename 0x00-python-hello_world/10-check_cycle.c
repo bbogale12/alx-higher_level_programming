@@ -1,22 +1,26 @@
 #include "lists.h"
+
 /**
- * check_cycle - checks for cycle in a linked list
- * @list: linked list to check
- * Return: 1 if cycle, 0 if not
+ * check_cycle - checks singly linked list for backward links
+ *
+ * @list: point in a singly linked list to begin search for backward links
+ *
+ * Return: 0 if all links move forward through list, 1 if backward link
+ *         is found, or -1 on failure
  */
+
 int check_cycle(listint_t *list)
 {
-	listint_t *temp1 = NULL, *temp2 = NULL;
+	listint_t *base, *test;
 
-	temp1 = list;
-	temp2 = list;
+	base = list;
+	test = list;
 
-	while (list)
+	while (base && test && test->next)
 	{
-		temp2 = temp2->next;
-		if (!temp1 || !temp2)
-			return (0);
-		if (temp2 == temp1)
+		base = base->next;
+		test = test->next->next;
+		if (base == test)
 			return (1);
 	}
 	return (0);
