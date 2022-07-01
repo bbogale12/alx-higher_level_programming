@@ -188,4 +188,4 @@ File(s): [`103-fast_alphabet.py`](./103-fast_alphabet.py)
 ---
 
 ## Student
-* **Bereket Bogale** - [allelomorph](https://github.com/bbogale12)
+* **Bereket Bogale** - (https://github.com/bbogale12)
